@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đo Nhịp Tim và SPO2</title>
+    <link rel="stylesheet" href="src/styles.css">
+<!--    <script src="./src/firebaseScript.js" defer type="module"></script>-->
+</head>
+<body>
+
+<header>
+    <img src="image/403417615_1542727206491951_1955651851034122454_n.png" alt="University Logo"
+         style="max-width: 100px; margin-bottom: 0px;">
+    <h2>Đồ Án Tốt Nghiệp</h2>
+</header>
+
+<div class="container">
+    <h2>Đo Nhịp Tim và SPO2</h2>
+    <div class="heart-rate" id="heartRate">Nhịp Tim: 0bpm.</div>
+    <div class="breath-rate" id="breathRate">SPO2: 0%.</div>
+    <button id="startButton">Lưu thông tin</button>
+
+    <div class="image-text-container">
+        <img src="image/nhip_tim.jpg" alt="Heart">
+    </div>
+</div>
+<!-- Nhúng Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-database.js"></script>
+
+<!-- Nhúng file JavaScript của bạn -->
+<!--<script type="module" src="src/firebaseScript.js"></script>-->
+
+<!-- Sử dụng hàm getLocationData từ file JavaScript -->
+<script type="module">
+    import { getLocationData } from 'src/firebaseScript.js';
+
+    // Gọi hàm để lấy dữ liệu khi cần
+    getLocationData();
+</script>
+
+</body>
+</html>
