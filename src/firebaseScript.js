@@ -42,8 +42,8 @@ async function fetchData() {
 
                 function startMeasurement() {
                     const newData = {
-                        heartRate: 84,
-                        breathRate: 21.50
+                        heartRate: heartRateData,
+                        breathRate: breathRateData
                     };
                     dataList.push(newData);
                     set(locationRefList, dataList);
