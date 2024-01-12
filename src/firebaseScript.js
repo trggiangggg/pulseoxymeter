@@ -4,21 +4,21 @@ import {getDatabase, set, ref, get, update} from "https://www.gstatic.com/fireba
 
 
 var firebaseConfig = {
-    apiKey: "AIzaSyCsJBR0Mm23RUBqmdjEhvY8huGOU0egqAs",
-    authDomain: "iot-weather-f35d1.firebaseapp.com",
-    databaseURL: "https://iot-weather-f35d1-default-rtdb.firebaseio.com",
-    projectId: "iot-weather-f35d1",
-    storageBucket: "iot-weather-f35d1.appspot.com",
-    messagingSenderId: "581915043211",
-    appId: "1:581915043211:web:0ef0b32593561c677f3b8e",
-    measurementId: "G-FP2D1M48SG"
+    apiKey: "AIzaSyDpPwuHpdYiwoD04MyTrXnAUDJNDw9pwJQ",
+    authDomain: "datndh-a7596.firebaseapp.com",
+    databaseURL: "https://datndh-a7596-default-rtdb.firebaseio.com",
+    projectId: "datndh-a7596",
+    storageBucket: "datndh-a7596.appspot.com",
+    messagingSenderId: "614946479153",
+    appId: "1:614946479153:web:040672b0ba452ff0a1c910",
+    measurementId: "G-ME0XDSK6LG"
 };
 
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 console.log(database)
-const locationRef = ref(database, "heartRate");
-const locationRef2 = ref(database, "breathRate");
+const locationRef = ref(database, "Heart_rate");
+const locationRef2 = ref(database, "Spo2");
 const locationRefList = ref(database, "data_save");
 console.log('heartRate' + locationRef)
 console.log('breathRate' + locationRef)
