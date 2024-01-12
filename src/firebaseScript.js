@@ -21,7 +21,7 @@ const locationRef = ref(database, "Heart_rate");
 const locationRef2 = ref(database, "Spo2");
 const locationRefList = ref(database, "data_save");
 console.log('heartRate' + locationRef)
-console.log('breathRate' + locationRef)
+console.log('breathRate' + locationRef)  
 
 async function fetchData() {
 
@@ -33,8 +33,8 @@ async function fetchData() {
             document.getElementById('heartRate').innerHTML = `Nhịp Tim: ${heartRateData} bpm`;
             const snapshot2 = await get(locationRef2);
             if (snapshot2.val()) {
-                const breathRateData = snapshot2.val();
-                console.log('Data - breathRate:', breathRateData);
+                const breathRateData = snapshot2.val(); 
+                console.log('Data - breathRate:', breathRateData); 
                 document.getElementById('breathRate').innerHTML = `SPO2: ${breathRateData} %`;
                 const snapshot3 = await get(locationRefList);
                 const dataList = snapshot3.val() || []
@@ -43,7 +43,7 @@ async function fetchData() {
                 function startMeasurement() {
                     const newData = {
                         heartRate: heartRateData,
-                        breathRate: breathRateData
+                        SP02: breathRateData
                     };
                     dataList.push(newData);
                     set(locationRefList, dataList);
